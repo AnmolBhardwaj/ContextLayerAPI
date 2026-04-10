@@ -1,0 +1,30 @@
+# Context Layer API — Application Configuration
+# This is the only file you need to touch to adapt the server to your environment.
+# No Python changes required.
+
+api:
+  title: "Context Layer API"
+  description: "Domain-agnostic context retrieval from markdown knowledge files."
+  version: "1.0.0"
+  prefix: "/api/v1"
+
+server:
+  host: "127.0.0.1"
+  port: 8000
+  reload: true
+
+context:
+  # Path to the knowledge folder, relative to the project root (where run.py lives).
+  base_path: "context"
+  domains_subdir: "domains"
+  global_subdir: "global"
+  mappings_subdir: "mappings"
+  intent_map_file: "intent_map.yaml"
+  # Fallback intent key used when the requested intent is not found in intent_map.yaml.
+  # This key MUST exist in intent_map.yaml.
+  default_intent: "default"
+
+validation:
+  # Maximum allowed character length for domain and intent parameters.
+  # Increase if your intent names are longer than 100 characters.
+  max_identifier_length: 100

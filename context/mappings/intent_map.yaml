@@ -1,0 +1,34 @@
+# Intent map — defines which context sections each intent includes.
+# Keys must match the section keys produced by parser.py (lowercase, spaces→underscores).
+# The "default" intent is the fallback when an unknown intent is requested.
+
+default:
+  include:
+    - product_overview
+    - tone_and_style
+
+summarise:
+  include:
+    - product_overview
+    - tone_and_style
+    - summarise_guidelines
+    - writing_guidelines
+
+support:
+  include:
+    - product_overview
+    - tone_and_style
+    - customer_support_guidance
+    - writing_guidelines
+    - safety_and_ethics
+
+compliance:
+  include:
+    - product_overview
+    - regulatory_compliance
+    - fraud_prevention
+    - safety_and_ethics
+    - writing_guidelines
+
+full:
+  include: []  # empty = return all available sections

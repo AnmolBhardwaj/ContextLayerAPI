@@ -1,0 +1,5 @@
+{
+  "intent": "summarise",
+  "domain": "banking",
+  "explain": true
+}
